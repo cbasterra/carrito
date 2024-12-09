@@ -8,6 +8,7 @@ import { CategoriesComponent } from './components/categories/categories.componen
 import { ProductsComponent } from './components/products/products.component';
 import { CartComponent } from './components/cart/cart.component';
 import { RouterModule, Routes } from '@angular/router';
+import { FooterComponent } from './components/footer/footer.component';
 
 const routes: Routes = [
   {path: '', component: LoginComponent},
@@ -20,7 +21,8 @@ const routes: Routes = [
     LoginComponent,
     CategoriesComponent,
     ProductsComponent,
-    CartComponent
+    CartComponent,
+    FooterComponent
   ],
   imports: [
     BrowserModule,

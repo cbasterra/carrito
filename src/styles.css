@@ -1,1 +1,40 @@
 /* You can add global styles to this file, and also import other style files */
+html, body {
+    height: 100%;
+    margin: 0;
+  }
+  
+  .bg-dark {
+    background-color: #000 !important;
+  }
+  
+  .card {
+    border-radius: 10px;
+  }
+
+  .card:hover{
+    cursor: pointer;
+  }
+  
+  .card img {
+    transition: transform 0.3s ease;
+  }
+  
+  .card:hover img {
+    transform: scale(1.1);
+  }
+  
+  button {
+    font-size: 16px;
+    text-decoration: none;
+  }
+  
+  button i {
+    font-size: 24px;
+    color: #6c757d;
+  }
+  
+  button:hover i {
+    color: #000;
+  }
+  
