@@ -1,1 +1,63 @@
-<p>products works!</p>
+<div class="container-fluid vh-100 p-0 d-flex flex-column bg-dark">
+    <!-- Fondo con imagen -->
+    <div class="position-absolute w-100 h-100" style="z-index: 0;">
+      <img
+        src="assets/background2.png"
+        alt="Background"
+        class="img-fluid w-100 h-100"
+        style="object-fit: cover;"
+      />
+    </div>
+  
+    <!-- Contenido central -->
+    <div class="container d-flex flex-column align-items-center justify-content-center flex-grow-1">
+      <div class="row g-3">
+        <!-- Primera fila de tarjetas -->
+        <div class="col-6">
+          <div class="card shadow" style="overflow: hidden;">
+            <img
+              src="assets/remeras.jpg"
+              class="card-img-top"
+              alt="Remeras"
+              style="height: 200px; object-fit: cover;"
+            />
+            <div class="card-body text-center">
+              <h5 class="card-title">REMERAS</h5>
+            </div>
+          </div>
+        </div>
+  
+        <div class="col-6">
+          <div class="card shadow" style="overflow: hidden;">
+            <img
+              src="assets/buzos.png"
+              class="card-img-top"
+              alt="Buzos"
+              style="height: 200px; object-fit: cover;"
+            />
+            <div class="card-body text-center">
+              <h5 class="card-title">BUZOS</h5>
+            </div>
+          </div>
+        </div>
+  
+        <!-- Segunda fila de tarjetas -->
+        <div class="col-12">
+          <div class="card shadow" style="overflow: hidden;">
+            <img
+              src="assets/jeans.jpg"
+              class="card-img-top"
+              alt="Jeans"
+              style="height: 200px; object-fit: cover;"
+            />
+            <div class="card-body text-center">
+              <h5 class="card-title">JEANS</h5>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  
+    <app-footer style="z-index: 99;"></app-footer>
+  </div>
+  

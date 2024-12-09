@@ -13,6 +13,7 @@ import { FooterComponent } from './components/footer/footer.component';
 const routes: Routes = [
   {path: '', component: LoginComponent},
   {path: 'categorias', component: CategoriesComponent},
+  {path: 'productos', component: ProductsComponent},
 ]
 
 @NgModule({
