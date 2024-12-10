@@ -43,7 +43,7 @@ export class ProductDetailComponent implements OnInit {
     this.carrito.idProducto = this.producto.id;
     this.carrito.talle = this.talle;
     this.carritoService.agregarCarrito(this.carrito, this.talle).subscribe((carrito) => {
-      console.log(carrito);
+      
     });
   }
 }
