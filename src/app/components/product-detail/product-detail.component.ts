@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { ProductosServiceService } from 'src/app/services/productos-service.service';
 import { Producto } from 'src/interfaces/productos';
 import { Cart } from 'src/interfaces/cart';
@@ -11,7 +11,7 @@ import { CarritoService } from 'src/app/services/carrito.service';
   styleUrls: ['./product-detail.component.css']
 })
 export class ProductDetailComponent implements OnInit {
-  constructor(private productosService: ProductosServiceService, private carritoService:CarritoService, private route: ActivatedRoute) {}
+  constructor(private productosService: ProductosServiceService, private carritoService:CarritoService, private route: ActivatedRoute, private router: Router) {}
 
   carrito = {
     id: 0,
@@ -43,7 +43,8 @@ export class ProductDetailComponent implements OnInit {
     this.carrito.idProducto = this.producto.id;
     this.carrito.talle = this.talle;
     this.carritoService.agregarCarrito(this.carrito, this.talle).subscribe((carrito) => {
-      
+      alert('Producto agregado al carrito');
+      this.router.navigate(['/carrito']);
     });
   }
 }
