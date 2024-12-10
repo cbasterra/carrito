@@ -13,6 +13,7 @@
     <div class="container d-flex flex-column align-items-center justify-content-center flex-grow-1">
       <div class="row g-3">
         <div class="col-6" *ngFor="let producto of productos">
+          <a [routerLink]="'../'+producto.id">
           <div class="card shadow" style="overflow: hidden;">
             <img
               [src]="'assets/' + this.category + '/' +producto.imagen"
@@ -24,6 +25,7 @@
               <h5 class="card-title">{{producto.title + ' - $' + producto.price}}</h5>
             </div>
           </div>
+        </a>
         </div>
       </div>
     </div>

@@ -10,6 +10,7 @@ import { CartComponent } from './components/cart/cart.component';
 import { RouterModule, Routes } from '@angular/router';
 import { FooterComponent } from './components/footer/footer.component';
 import { HttpClientModule } from '@angular/common/http';
+import { ProductDetailComponent } from './components/product-detail/product-detail.component';
 
 const routes: Routes = [
   {path: '', component: LoginComponent},
@@ -17,6 +18,7 @@ const routes: Routes = [
   {path: 'productos/remeras', component: ProductsComponent, data: {category: 'remeras'}},
   {path: 'productos/buzos', component: ProductsComponent, data: {category: 'buzos'}},
   {path: 'productos/jeans', component: ProductsComponent, data: {category: 'jeans'}},
+  {path: 'productos/:idproducto', component: ProductDetailComponent}
 ]
 
 @NgModule({
@@ -26,7 +28,8 @@ const routes: Routes = [
     CategoriesComponent,
     ProductsComponent,
     CartComponent,
-    FooterComponent
+    FooterComponent,
+    ProductDetailComponent
   ],
   imports: [
     BrowserModule,
