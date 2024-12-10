@@ -19,6 +19,10 @@ export class CarritoService {
 
   constructor(private http: HttpClient) { }
 
+  getCarrito(): Observable<Cart[]> {
+    return this.http.get<Cart[]>(this.apiUrl);
+  }
+
   agregarCarrito(carrito: Cart, talle: string): Observable<Cart> {
     this.carrito.idProducto = carrito.idProducto;
     this.carrito.talle = talle;
