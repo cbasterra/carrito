@@ -29,15 +29,15 @@
   
       <h4 class="mt-3">Size</h4>
       <div class="sizes d-flex gap-2">
-        <button class="btn btn-outline-secondary">XS</button>
-        <button class="btn btn-outline-secondary">S</button>
-        <button class="btn btn-outline-secondary">M</button>
-        <button class="btn btn-outline-secondary">L</button>
-        <button class="btn btn-outline-secondary">XL</button>
+        <button class="btn btn-outline-secondary" (click)="seleccionarTalle('XS')" [ngClass]="talle == 'XS' ? 'selected' : ''">XS</button>
+        <button class="btn btn-outline-secondary" (click)="seleccionarTalle('S')" [ngClass]="talle == 'S' ? 'selected' : ''">S</button>
+        <button class="btn btn-outline-secondary" (click)="seleccionarTalle('M')" [ngClass]="talle == 'M' ? 'selected' : ''">M</button>
+        <button class="btn btn-outline-secondary" (click)="seleccionarTalle('L')" [ngClass]="talle == 'L' ? 'selected' : ''">L</button>
+        <button class="btn btn-outline-secondary" (click)="seleccionarTalle('XL')" [ngClass]="talle == 'XL' ? 'selected' : ''">XL</button>
       </div>
     </div>
   
-    <button class="btn btn-primary w-100">
+    <button class="btn btn-primary w-100" (click)="agregarCarrito()">
       <i class="bi bi-cart-plus me-2"></i>
       Agrega al carrito
     </button>
