@@ -32,4 +32,8 @@ export class CarritoService {
   borrarCarrito(id: number): Observable<Cart> {
     return this.http.delete<Cart>(`${this.apiUrl}/${id}`);
   }
+
+  borrarTodoCarrito(): Observable<Cart> {
+    return this.http.delete<Cart>(this.apiUrl);
+  }
 }

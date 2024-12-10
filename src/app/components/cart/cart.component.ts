@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { CarritoService } from 'src/app/services/carrito.service';
 import { ProductosServiceService } from 'src/app/services/productos-service.service';
 
@@ -23,7 +24,8 @@ export class CartComponent implements OnInit {
 
   constructor(
     private carritoService: CarritoService, 
-    private productosService: ProductosServiceService
+    private productosService: ProductosServiceService,
+    private router: Router
   ) {}
 
   ngOnInit(): void {
@@ -56,5 +58,17 @@ export class CartComponent implements OnInit {
 
   calcularTotal(): void {
     this.total = this.carrito.reduce((sum, item) => sum + item.precio, 0);
+  }
+
+  limpiarCarrito(): void {
+
+    this.productos.forEach((item: any) => {
+      this.carritoService.borrarCarrito(item.id).subscribe((carrito) => {
+        console.log(carrito);
+      });
+    });
+    alert('Compra realizada con éxito');
+    this.router.navigate(['/categorias']);
+    
   }
 }
