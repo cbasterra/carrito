@@ -16,8 +16,8 @@ export class ProductDetailComponent implements OnInit {
     id: 0,
     title: '',
     price: 0,
-    imagen: '',
-    categoria: '',
+    imagen: 'noimage.jpg',
+    categoria: 'remeras',
   };
   idproducto: string = '';
 
