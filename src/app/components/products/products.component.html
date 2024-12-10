@@ -12,17 +12,16 @@
     <!-- Contenido central -->
     <div class="container d-flex flex-column align-items-center justify-content-center flex-grow-1">
       <div class="row g-3">
-        <!-- Primera fila de tarjetas -->
-        <div class="col-6">
+        <div class="col-6" *ngFor="let producto of productos">
           <div class="card shadow" style="overflow: hidden;">
             <img
-              src="assets/remeras.jpg"
+              [src]="'assets/' + this.category + '/' +producto.imagen"
               class="card-img-top"
-              alt="Remeras"
+              [alt]="producto.title"
               style="height: 200px; object-fit: cover;"
             />
             <div class="card-body text-center">
-              <h5 class="card-title">REMERAS</h5>
+              <h5 class="card-title">{{producto.title + ' - $' + producto.price}}</h5>
             </div>
           </div>
         </div>

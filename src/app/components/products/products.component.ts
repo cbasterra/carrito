@@ -19,13 +19,16 @@ export class ProductsComponent implements OnInit {
     this.route.data.subscribe((data) => {
       this.category = data['category']; // Extraer el valor de 'category'
       console.log('Categoría:', this.category);
-    });
-
-    // Llamar al servicio para obtener los productos
+      // Llamar al servicio para obtener los productos
     this.productosService.getProductos().subscribe((productos) => {
       this.productos = productos;
-      console.log('Productos:', this.productos);
+      this.productos = productos.filter((producto) => {
+        return producto.categoria === this.category;
+      });
     });
+    });
+
+    
 
   }
 }
